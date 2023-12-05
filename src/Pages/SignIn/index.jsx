@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Siging() {
+export default function SignIn() {
   return (
     <div>
       Siging
