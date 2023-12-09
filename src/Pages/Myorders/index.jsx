@@ -14,18 +14,18 @@ function MyOrders() {
         <Link to='/my-orders' className='absolute left-0'>
           <ChevronLeftIcon className='h-6 w-6 text-black cursor-pointer'/>
         </Link>
-        <h1> MyOrders</h1>
+        <h1 className='font-medium text-xl'> My Orders</h1>
       </div>
  
       {
-        context.order.map((order , index) => {
-          <Link  key={index} to={`/my-orders/${order.id}`}>
+        context.order.map((order , index) => (
+          <Link  key={index} to={`/my-orders/${index}`}>
           <OrdersCard
             totalPrice={order.totalPrice}
             totalProduct={order.totalProduct}
           />
           </Link>
-        })
+        ))
       }
     </Layout>
   )
